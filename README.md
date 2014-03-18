@@ -1,4 +1,6 @@
 fundomplate
 ===========
 
-State-full functional DOM templating
+Pre-alpha release
+
+Stateful functional DOM templating
