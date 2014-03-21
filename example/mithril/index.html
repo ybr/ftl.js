@@ -1,0 +1,74 @@
+<html>
+<head>
+  <script type="text/javascript" src="../../build/fundomplate.min.js"></script>
+  <title>Mithril</title>
+</head>
+<body>
+  <h2>Code snippet from <a href="http://lhorie.github.io/mithril/getting-started.html#view">Mithril</a></h2>
+  <pre>
+    <code>
+    todo.view = function(ctrl) {
+        return m("html", [
+            m("body", [
+                m("input"),
+                m("button", "Add"),
+                m("table", [
+                    m("tr", [
+                        m("td", [
+                            m("input[type=checkbox]")
+                        ]),
+                        m("td", "task description"),
+                    ])
+                ])
+            ])
+        ]);
+    };
+    </code>
+  </pre>
+  <h2>Code snippet for fundomplate</a></h2>
+  <pre>
+    <code>
+    var h = fundomplate;
+    var todo = {
+      view: function() {
+        return h()(
+          h("input")(),
+          h("button")("Add"),
+          h("table")(
+            h("tr")(
+              h("td")(
+                h("input")({ "type": "checkbox" })
+              ),
+              h("td")("task description")
+            )
+          )
+        )
+      }
+    };
+    </code>
+  </pre>
+  <h2>Live rendering with fundomplate</h2>
+  <div id="content"></div>
+  <script type="text/javascript">
+  var h = fundomplate;
+  var todo = {
+    view: function() {
+      return h()(
+        h("input")(),
+        h("button")("Add"),
+        h("table")(
+          h("tr")(
+            h("td")(
+              h("input")({ "type": "checkbox" })
+            ),
+            h("td")("task description")
+          )
+        )
+      )
+    }
+  };
+
+  document.querySelector("#content").appendChild(todo.view()());
+  </script>
+</body>
+</html>
