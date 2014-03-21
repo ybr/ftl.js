@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/ybr/fundomplate.git"
   },
-  "main": "build/fundomplate.js",
+  "main": "lib/fundomplate.js",
   "keywords": [
     "template",
     "stateful",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-uglify": "^0.4.0"
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-string-replace": "^0.2.7"
   }
 }
