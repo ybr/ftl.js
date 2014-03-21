@@ -1,0 +1,28 @@
+{
+  "name": "fundomplate",
+  "version": "0.0.0",
+  "description": "Stateful functional DOM templating",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ybr/fundomplate.git"
+  },
+  "main": "build/fundomplate.js",
+  "keywords": [
+    "template",
+    "stateful",
+    "DOM",
+    "functional"
+  ],
+  "homepage": "https://github.com/ybr/fundomplate",
+  "bugs": {
+    "url": "https://github.com/ybr/fundomplate/issues"
+  },
+  "author": "Yohann Brédoux <yohann.bredoux@gmail.com>",
+  "contributors": [],
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-uglify": "^0.4.0"
+  }
+}
