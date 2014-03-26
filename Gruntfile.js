@@ -29,12 +29,22 @@ module.exports = function(grunt) {
           }]
         }
       }
+    },
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/**/*.js']
+      }
     }
   })
 
-  grunt.loadNpmTasks("grunt-contrib-uglify")
-  grunt.loadNpmTasks("grunt-contrib-jshint")
-  grunt.loadNpmTasks("grunt-string-replace")
+  grunt.loadNpmTasks('grunt-contrib-uglify')
+  grunt.loadNpmTasks('grunt-contrib-jshint')
+  grunt.loadNpmTasks('grunt-string-replace')
+  grunt.loadNpmTasks('grunt-mocha-test')
 
-  grunt.registerTask("default", ["jshint", "string-replace", "uglify"])
+  grunt.registerTask('default', ['mochaTest', 'jshint', 'string-replace', 'uglify'])
+  grunt.registerTask('test', ['mochaTest'])
 }
