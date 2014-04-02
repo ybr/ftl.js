@@ -1,31 +1,33 @@
 describe('Simple use cases', function() {
+  var assert = chai.assert
+
   it('should return a Text element containing "Some text"', function() {
     var elem = fundomplate()("Some text")()
-    chai.assert.equal("Some text", elem.textContent)
+    assert.equal("Some text", elem.textContent)
   })
 
   it('should return a Text element containing "123"', function() {
     var elem = fundomplate()(123)()
-    chai.assert.equal("123", elem.textContent)
+    assert.equal("123", elem.textContent)
   })
 
   it('should return a Text element containing "Some" "other" "text"', function() {
     var elem = fundomplate()(["Some", "other", "text"])()
-    chai.assert.equal("Someothertext", elem.textContent)
+    assert.equal("Someothertext", elem.textContent)
   })
 
   it('should return a Text element containing "Some" "123.45"', function() {
     var elem = fundomplate()(["Some", 123.45])()
-    chai.assert.equal("Some123.45", elem.textContent)
+    assert.equal("Some123.45", elem.textContent)
   })
 
   it('should return a <h1>My title</h1> element', function() {
     var elem = fundomplate("h1")("My title")()
-    chai.assert.equal("<h1>My title</h1>", elem.outerHTML)
+    assert.equal("<h1>My title</h1>", elem.outerHTML)
   })
 
   it('should return a <form>....</form> element', function() {
-    var elem = fundomplate("form")({ action: "https://github.com/ybr/fundomplate"},
+    var form = fundomplate("form")({ action: "https://github.com/ybr/fundomplate"},
       fundomplate("fieldset")(
         fundomplate("label")({ "for": "myinput" }, "My input"),
         fundomplate("input")({ type: "text", id: "myinput" })
@@ -34,7 +36,36 @@ describe('Simple use cases', function() {
         fundomplate("button")({ type: "submit" }, "OK")
       )
     )()
-    chai.assert.equal(elem.tagName, "FORM")
-    chai.assert.equal('<form action="https://github.com/ybr/fundomplate"><fieldset><label for="myinput">My input</label><input id="myinput" type="text"></fieldset><div class="actions"><button type="submit">OK</button></div></form>', elem.outerHTML)
+
+    assert.equal(form.tagName, 'FORM')
+    assert.equal(form.getAttribute('action'), 'https://github.com/ybr/fundomplate')
+
+    var fieldset = form.childNodes.item(0)
+    assert.equal(fieldset.tagName, 'FIELDSET')
+
+    var label = fieldset.childNodes.item(0)
+    assert.equal(label.tagName, 'LABEL')
+    assert.equal(label.getAttribute('for'), 'myinput')
+
+    var labelText = label.childNodes.item(0)
+    assert.equal(labelText.nodeName, '#text')
+    assert.equal(labelText.nodeValue, 'My input')
+
+    var input = fieldset.childNodes.item(1)
+    assert.equal(input.tagName, 'INPUT')
+    assert.equal(input.getAttribute('id'), 'myinput')
+    assert.equal(input.getAttribute('type'), 'text')
+
+    var actions = form.childNodes.item(1)
+    assert.equal(actions.tagName, 'DIV')
+    assert.equal(actions.getAttribute('class'), 'actions')
+
+    var button = actions.childNodes.item(0)
+    assert.equal(button.tagName, 'BUTTON')
+    assert.equal(button.getAttribute('type'), 'submit')
+
+    var buttonText = button.childNodes.item(0)
+    assert.equal(buttonText.nodeName, '#text')
+    assert.equal(buttonText.nodeValue, 'OK')
   })
 })
