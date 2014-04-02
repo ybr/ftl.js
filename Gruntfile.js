@@ -1,23 +1,101 @@
 module.exports = function(grunt) {
-  var browsers = [{
+  var firefox = [{
+    browserName: "firefox",
+    version: "10",
+    platform: "Windows 8"
+  }, {
+    browserName: "firefox",
+    version: "16",
+    platform: "Windows 8"
+  }, {
     browserName: "firefox",
     version: "19",
     platform: "XP"
+  }, {
+    browserName: "firefox",
+    version: "20",
+    platform: "Windows 8"
+  }, {
+    browserName: "firefox",
+    version: "22",
+    platform: "Windows 8"
+  }];
+
+  var chrome = [{
+    browserName: "googlechrome",
+    platform: "OS X 10.6"
+  }, {
+    browserName: "chrome",
+    platform: "XP"
   },{
-  //   browserName: "chrome",
-  //   platform: "XP"
-  // }, {
-  //   browserName: "chrome",
-  //   platform: "linux"
-  // }, {
+    browserName: "chrome",
+    platform: "Windows 7"
+  }, {
+    browserName: "chrome",
+    platform: "linux"
+  }];
+
+  var ie = [{
+    browserName: "internet explorer",
+    version: "8",
+    platform: "Windows XP"
+  }, {
+    browserName: "internet explorer",
+    version: "9",
+    platform: "VISTA"
+  }, {
+    browserName: "internet explorer",
+    version: "9",
+    platform: "Windows 7"
+  }, {
     browserName: "internet explorer",
     version: "10",
-    platform: "WIN8"
-  // }, {
-  //   browserName: "internet explorer",
-  //   version: "9",
-  //   platform: "VISTA"
+    platform: "Windows 8"
+  }, {
+    browserName: "internet explorer",
+    version: "11",
+    platform: "Windows 8.1"
   }];
+
+  var opera = [{
+    browserName: "opera",
+    version: "12",
+    platform: "Windows 7"
+  }];
+
+  var safari = [{
+    browserName:"android",
+    version: "4.0",
+    platform: "Linux"
+  }, {
+    browserName:"safari",
+    version: "5",
+    platform: "OS X 10.6"
+  }, {
+    browserName:"safari",
+    version: "6",
+    platform: "OS X 10.8"
+  }];
+
+  var iphone = [{
+    browserName:"iphone",
+    version: "5.0",
+    platform: "OS X 10.6"
+  }, {
+    browserName:"iphone",
+    version: "5.1",
+    platform: "OS X 10.8"
+  }, {
+    browserName:"iphone",
+    version: "6",
+    platform: "OS X 10.8"
+  }, {
+    browserName:"iphone",
+    version: "6.1",
+    platform: "OS X 10.8"
+  }];
+
+  var browsers = firefox.concat(chrome).concat(ie).concat(opera).concat(safari).concat(iphone);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
