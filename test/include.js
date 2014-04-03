@@ -48,11 +48,11 @@ describe('Include use case', function() {
 
     var column0 = headRow.childNodes.item(0)
     assert.equal(column0.tagName, 'TH')
-    assert.equal(column0.innerText, 'First name')
+    assert.equal(column0.innerHTML, 'First name')
 
     var column1 = headRow.childNodes.item(1)
     assert.equal(column1.tagName, 'TH')
-    assert.equal(column1.innerText, 'Last name')
+    assert.equal(column1.innerHTML, 'Last name')
 
     var body = table.childNodes.item(1)
     assert.equal(body.tagName, 'TBODY')
@@ -62,21 +62,21 @@ describe('Include use case', function() {
 
     var column0YBR = rowYBR.childNodes.item(0)
     assert.equal(column0YBR.tagName, 'TD')
-    assert.equal(column0YBR.innerText, 'yohann')
+    assert.equal(column0YBR.innerHTML, 'yohann')
 
     var column1YBR = rowYBR.childNodes.item(1)
     assert.equal(column1YBR.tagName, 'TD')
-    assert.equal(column1YBR.innerText, 'bredoux')
+    assert.equal(column1YBR.innerHTML, 'bredoux')
 
     var rowMRN = body.childNodes.item(1)
     assert.equal(rowYBR.tagName, 'TR')
 
     var column0MRN = rowMRN.childNodes.item(0)
     assert.equal(column0MRN.tagName, 'TD')
-    assert.equal(column0MRN.innerText, 'nizar')
+    assert.equal(column0MRN.innerHTML, 'nizar')
 
     var column1MRN = rowMRN.childNodes.item(1)
     assert.equal(column1MRN.tagName, 'TD')
-    assert.equal(column1MRN.innerText, 'mr')
+    assert.equal(column1MRN.innerHTML, 'mr')
   })
 })
