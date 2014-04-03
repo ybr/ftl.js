@@ -3,22 +3,25 @@ describe('Simple use cases', function() {
 
   it('should return a Text element containing "Some text"', function() {
     var elem = fundomplate()("Some text")()
-    assert.equal("Some text", elem.textContent)
+    assert.equal("Some text", elem.childNodes.item(0).nodeValue)
   })
 
   it('should return a Text element containing "123"', function() {
     var elem = fundomplate()(123)()
-    assert.equal("123", elem.textContent)
+    assert.equal("123", elem.childNodes.item(0).nodeValue)
   })
 
   it('should return a Text element containing "Some" "other" "text"', function() {
     var elem = fundomplate()(["Some", "other", "text"])()
-    assert.equal("Someothertext", elem.textContent)
+    assert.equal("Some", elem.childNodes.item(0).nodeValue)
+    assert.equal("other", elem.childNodes.item(1).nodeValue)
+    assert.equal("text", elem.childNodes.item(2).nodeValue)
   })
 
   it('should return a Text element containing "Some" "123.45"', function() {
     var elem = fundomplate()(["Some", 123.45])()
-    assert.equal("Some123.45", elem.textContent)
+    assert.equal("Some", elem.childNodes.item(0).nodeValue)
+    assert.equal("123.45", elem.childNodes.item(1).nodeValue)
   })
 
   it('should return a <h1>My title</h1> element', function() {
