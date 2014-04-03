@@ -6,13 +6,6 @@ describe('Include use case', function() {
   var assert = chai.assert
 
   it('should return a table of users', function() {
-    function displayOneUser(user) {
-      return h.tr(
-        h.td(user.firstname),
-        h.td(user.lastname)
-      )
-    }
-
     function displayUsers(users) {
       return h.table(
         h.thead(
@@ -22,9 +15,17 @@ describe('Include use case', function() {
           )
         ),
         h.tbody(
-          // here is the inclusion
+          // HERE IS THE INCLUSION CALL
           users.map(displayOneUser)
         )
+      )
+    }
+
+    // HERE IS THE INCLUSION DECLARATION
+    function displayOneUser(user) {
+      return h.tr(
+        h.td(user.firstname),
+        h.td(user.lastname)
       )
     }
 
