@@ -1,5 +1,5 @@
-fundomplate
-===========
+ftl
+====
 
 Pre-alpha release
 

@@ -1,22 +1,22 @@
 {
-  "name": "fundomplate",
+  "name": "ftl",
   "version": "0.0.0",
   "description": "Stateful functional DOM templating",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ybr/fundomplate.git"
+    "url": "https://github.com/ybr/ftl.git"
   },
-  "main": "lib/fundomplate.js",
+  "main": "lib/ftl.js",
   "keywords": [
     "template",
     "stateful",
     "DOM",
     "functional"
   ],
-  "homepage": "https://github.com/ybr/fundomplate",
+  "homepage": "https://github.com/ybr/ftl",
   "bugs": {
-    "url": "https://github.com/ybr/fundomplate/issues"
+    "url": "https://github.com/ybr/ftl/issues"
   },
   "author": "Yohann Brédoux <yohann.bredoux@gmail.com>",
   "contributors": [],

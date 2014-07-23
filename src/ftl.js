@@ -1,23 +1,16 @@
-(function (definition) {
-    if (typeof exports === "object") {
-        module.exports = definition();
-    } else {
-        window.fundomplate = definition();
-    }
-})(function() {
 /*
  * Stateful functional DOM templating
  */
 
 /*
- * fundomplate accepts an optional nodeName and returns a builder function
+ * ftl accepts an optional nodeName and returns a builder function
  * If nodeName is defined a specialized DOM element builder function is returned
  * otherwise a document fragment builder function is returned
  *
- * - fundomplate("h1") returns a builder function for h1
- * - fundomplate() returns a builder function for document fragment
+ * - ftl("h1") returns a builder function for h1
+ * - ftl() returns a builder function for document fragment
  */
-function fundomplate(nodeName) {
+function ftl(nodeName) {
   "use strict";
 
   /*
@@ -26,7 +19,7 @@ function fundomplate(nodeName) {
    *
    * Paramters can be a type :
    * - Function, another builder function that will be used to build children elements
-   * - Array, each element will cause a recursive use of fundomplate
+   * - Array, each element will cause a recursive use of ftl
    * - Object, each key/value pair is used to set attributes of the created DOM element
    * - otherwise the argument is appended as a text element child
    */
@@ -48,7 +41,7 @@ function fundomplate(nodeName) {
       // https://developers.google.com/speed/articles/javascript-dom
       var currentElem = nodeName?doc.createElement(nodeName):doc.createDocumentFragment();
 
-      function recurseOnThing(thing) { currentElem.appendChild(fundomplate()(thing)(doc)); }
+      function recurseOnThing(thing) { currentElem.appendChild(ftl()(thing)(doc)); }
 
       // iterate overs builder arguments to decide how the created DOM element shall be populated
       for(var i = 0; i < args.length; i++) {
@@ -71,6 +64,3 @@ function fundomplate(nodeName) {
     };
   };
 }
-
-return fundomplate;
-});

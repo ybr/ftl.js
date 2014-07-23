@@ -1,7 +1,7 @@
 describe('Include use case', function() {
   var h = {};
-  ['table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = fundomplate(tag) });
-  var fragment = fundomplate();
+  ['table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = ftl(tag) });
+  var fragment = ftl();
 
   var assert = chai.assert
 
