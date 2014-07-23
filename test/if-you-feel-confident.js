@@ -2,7 +2,7 @@ describe('If you feel confident use cases', function() {
   ['h1', 'form', 'fieldset', 'label', 'input', 'div', 'button'].forEach(function(tag) { window[tag] = ftl(tag) });
   var fragment = ftl();
 
-  var assert = chai.assert;
+  var assert = chai.assert
 
   it('should return a Text element containing "Some text"', function() {
     var elem = fragment("Some text")()
