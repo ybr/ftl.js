@@ -1,19 +1,80 @@
 fundomplate
 ===========
 
-Pre-alpha release
+A simple template library.
 
-Stateful functional DOM templating
+Simple usage :
+```javascript
+form({ action: "https://github.com/ybr/fundomplate"},
+  fieldset(
+    label({ "for": "myinput" }, "My input"),
+    input({ "type": "text", id: "myinput" })
+  ),
+  div({ "class": "actions"},
+    button("OK")
+  )
+)
+```
 
-Test
-====
+**fundomplate** is logic-full
 
-Mocha + saucelabs
+**fundomplate** does the strict minimum to make your DOM manipulation more readable
 
-https://saucelabs.com/docs/javascript-unit-testing-tutorial
+**fundomplate** allows you to write a template as a function and so compose it with other templates
 
-Set up environment variables that will store your Sauce username and access key:
-$ export SAUCE_USERNAME=YOUR-SAUCE-USERNAME
-$ export SAUCE_ACCESS_KEY=YOUR-SAUCE-API-KEY
+**fundomplate** allows you to extend the templating logic seamlessly with functions
 
-$ grunt test
+**fundomplate** has a very light footprint (< 500 bytes)
+
+**fundomplate** performs fast (BENCHMARKS  TODO)
+
+Supported browser
+---
+
+All browsers supported
+
+Current master state is [![Test Status](https://saucelabs.com/buildstatus/fundomplate)](https://saucelabs.com/u/fundomplate)
+
+Installation
+---
+
+From [NPM](https://npmjs.org/package/fundomplate)
+
+```npm install fundomplate --save```
+
+or directly in your package.json
+
+```json
+dependencies: {
+  "fundomplate": "^0.1.0"
+}
+```
+
+or from [GitHub](https://github.com/ybr/fundomplate)
+
+```json
+dependencies: {
+  "fundomplate": "https://github.com/ybr/fundomplate#master"
+}
+```
+
+Usages and explanations
+---
+
+Simple usage: test
+
+Include usage: test
+
+Layout usage: test
+
+Multi-interesting usage (i18n, date formatting):
+
+Helpers usage (with errors):
+
+Custom usage:
+table("Nom", "Adresse", users)
+if(admin)
+
+Multi-level layout usage: test
+
+
