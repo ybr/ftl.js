@@ -2,9 +2,9 @@
     if (typeof exports === "object") {
         module.exports = definition();
     } else {
-        window.fundomplate = definition();
+        window.ftl = definition();
     }
 })(function() {
-/*! import fundomplate.js */
-return fundomplate;
+/*! import ftl.js */
+return ftl;
 });

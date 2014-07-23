@@ -1,5 +1,5 @@
-fundomplate
-===========
+ftl
+====
 
 A simple template library.
 

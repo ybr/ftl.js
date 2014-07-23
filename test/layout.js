@@ -1,8 +1,8 @@
 describe('Layout use case', function() {
   var h = {};
-  ['h1', 'hr', 'div', 'footer', 'table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = fundomplate(tag) });
-  ["hr"].forEach(function(tag) { h[tag] = fundomplate(tag)() });
-  var fragment = fundomplate();
+  ['h1', 'hr', 'div', 'footer', 'table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = ftl(tag) });
+  ["hr"].forEach(function(tag) { h[tag] = ftl(tag)() });
+  var fragment = ftl();
 
   var assert = chai.assert
 

@@ -1,8 +1,8 @@
 describe('Multi-leval layout use case', function() {
   var h = {};
-  ['a', 'ul', 'li', 'nav', 'header', 'h1', 'hr', 'div', 'footer', 'table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = fundomplate(tag) });
-  ["hr"].forEach(function(tag) { h[tag] = fundomplate(tag)() });
-  var fragment = fundomplate();
+  ['a', 'ul', 'li', 'nav', 'header', 'h1', 'hr', 'div', 'footer', 'table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = ftl(tag) });
+  ["hr"].forEach(function(tag) { h[tag] = ftl(tag)() });
+  var fragment = ftl();
 
   var assert = chai.assert
 

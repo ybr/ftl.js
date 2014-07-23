@@ -2,51 +2,43 @@ describe('Simple use cases', function() {
   var assert = chai.assert
 
   it('should return a Text element containing "Some text"', function() {
-    var elem = fundomplate()("Some text")()
-    assert.equal("Some text", elem.childNodes.item(0).nodeValue)
+    var elem = ftl()("Some text")()
+    assert.equal("Some text", elem.textContent)
   })
 
   it('should return a Text element containing "123"', function() {
-    var elem = fundomplate()(123)()
-    assert.equal("123", elem.childNodes.item(0).nodeValue)
+    var elem = ftl()(123)()
+    assert.equal("123", elem.textContent)
   })
 
   it('should return a Text element containing "Some" "other" "text"', function() {
-    var elem = fundomplate()(["Some", "other", "text"])()
-    assert.equal("Some", elem.childNodes.item(0).nodeValue)
-    assert.equal("other", elem.childNodes.item(1).nodeValue)
-    assert.equal("text", elem.childNodes.item(2).nodeValue)
+    var elem = ftl()(["Some", "other", "text"])()
+    assert.equal("Someothertext", elem.textContent)
   })
 
   it('should return a Text element containing "Some" "123.45"', function() {
-    var elem = fundomplate()(["Some", 123.45])()
-    assert.equal("Some", elem.childNodes.item(0).nodeValue)
-    assert.equal("123.45", elem.childNodes.item(1).nodeValue)
+    var elem = ftl()(["Some", 123.45])()
+    assert.equal("Some123.45", elem.textContent)
   })
 
   it('should return a <h1>My title</h1> element', function() {
-    var h1 = fundomplate("h1")("My title")()
-
-    assert.equal(h1.tagName, 'H1')
-
-    var h1Text = h1.childNodes.item(0)
-    assert.equal(h1Text.nodeName, '#text')
-    assert.equal(h1Text.nodeValue, 'My title')
+    var elem = ftl("h1")("My title")()
+    assert.equal("<h1>My title</h1>", elem.outerHTML)
   })
 
   it('should return a <form>....</form> element', function() {
-    var form = fundomplate("form")({ action: "https://github.com/ybr/fundomplate"},
-      fundomplate("fieldset")(
-        fundomplate("label")({ "for": "myinput" }, "My input"),
-        fundomplate("input")({ type: "text", id: "myinput" })
+    var form = ftl("form")({ action: "https://github.com/ybr/ftl"},
+      ftl("fieldset")(
+        ftl("label")({ "for": "myinput" }, "My input"),
+        ftl("input")({ type: "text", id: "myinput" })
       ),
-      fundomplate("div")({ "class": "actions"},
-        fundomplate("button")({ type: "submit" }, "OK")
+      ftl("div")({ "class": "actions"},
+        ftl("button")({ type: "submit" }, "OK")
       )
     )()
 
     assert.equal(form.tagName, 'FORM')
-    assert.equal(form.getAttribute('action'), 'https://github.com/ybr/fundomplate')
+    assert.equal(form.getAttribute('action'), 'https://github.com/ybr/ftl')
 
     var fieldset = form.childNodes.item(0)
     assert.equal(fieldset.tagName, 'FIELDSET')

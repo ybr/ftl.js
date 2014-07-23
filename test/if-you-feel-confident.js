@@ -1,8 +1,8 @@
 describe('If you feel confident use cases', function() {
-  ['h1', 'form', 'fieldset', 'label', 'input', 'div', 'button'].forEach(function(tag) { window[tag] = fundomplate(tag) });
-  var fragment = fundomplate();
+  ['h1', 'form', 'fieldset', 'label', 'input', 'div', 'button'].forEach(function(tag) { window[tag] = ftl(tag) });
+  var fragment = ftl();
 
-  var assert = chai.assert;
+  var assert = chai.assert
 
   it('should return a Text element containing "Some text"', function() {
     var elem = fragment("Some text")()
@@ -35,7 +35,7 @@ describe('If you feel confident use cases', function() {
   })
 
   it('should return a <form>....</form> element', function() {
-    var formElem = form({ action: "https://github.com/ybr/fundomplate"},
+    var formElem = form({ action: "https://github.com/ybr/ftl"},
       fieldset(
         label({ "for": "myinput" }, "My input"),
         input({ type: "text", id: "myinput" })
@@ -46,7 +46,7 @@ describe('If you feel confident use cases', function() {
     )()
 
     assert.equal(formElem.tagName, 'FORM')
-    assert.equal(formElem.getAttribute('action'), 'https://github.com/ybr/fundomplate')
+    assert.equal(formElem.getAttribute('action'), 'https://github.com/ybr/ftl')
 
     var fieldsetElem = formElem.childNodes.item(0)
     assert.equal(fieldsetElem.tagName, 'FIELDSET')
