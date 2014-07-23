@@ -1,14 +1,13 @@
-ftl
-====
+# ftl
 
-A simple template library.
+Another template library
 
-Simple usage :
+Too simple usage ([more realistic use cases](#usages-and-explanations)) :
 ```javascript
-form({ action: "https://github.com/ybr/fundomplate"},
+form({ action: "https://github.com/ybr/ftl"},
   fieldset(
     label({ "for": "myinput" }, "My input"),
-    input({ "type": "text", id: "myinput" })
+    input({ "type": "text", id: "myinput", name: "myinput" })
   ),
   div({ "class": "actions"},
     button("OK")
@@ -16,65 +15,71 @@ form({ action: "https://github.com/ybr/fundomplate"},
 )
 ```
 
-**fundomplate** is logic-full
+It builds the following DOM :
+```
+<form action="https://github.com/ybr/ftl">
+  <fieldset>
+    <label for="myinput">My input</label>
+    <input type="text" id="myinput" name="myinput">
+  </fieldset>
+  <div class="actions">
+    <button>OK</button>
+  </div>
+</form>
+```
 
-**fundomplate** does the strict minimum to make your DOM manipulation more readable
+**ftl** is logic-full, just plain JS (i18n, text formatting, ...)
 
-**fundomplate** allows you to write a template as a function and so compose it with other templates
+**ftl** does the bare minimum to make your DOM manipulation more readable
 
-**fundomplate** allows you to extend the templating logic seamlessly with functions
+**ftl** allows you to write a template as a function, it pays you:
 
-**fundomplate** has a very light footprint (< 500 bytes)
+  * composability of templates, both include and layout
 
-**fundomplate** performs fast (BENCHMARKS  TODO)
+  * extensibility of the templating logic seamlessly
 
-Supported browser
+**ftl** has a very light footprint (< 500 bytes)
+
+**ftl** performs fast, see [benchmarks](#benchmarks)
+
 ---
+
+## Supported browser
 
 All browsers supported
 
-Current master state is [![Test Status](https://saucelabs.com/buildstatus/fundomplate)](https://saucelabs.com/u/fundomplate)
+Current master state is [![Test Status](https://saucelabs.com/buildstatus/ftljs)](https://saucelabs.com/u/ftljs)
 
-Installation
 ---
 
-From [NPM](https://npmjs.org/package/fundomplate)
+## Installation
 
-```npm install fundomplate --save```
-
-or directly in your package.json
+From [GitHub](https://github.com/ybr/ftl)
 
 ```json
 dependencies: {
-  "fundomplate": "^0.1.0"
+  "ftl": "https://github.com/ybr/ftl#master"
 }
 ```
 
-or from [GitHub](https://github.com/ybr/fundomplate)
-
-```json
-dependencies: {
-  "fundomplate": "https://github.com/ybr/fundomplate#master"
-}
-```
-
-Usages and explanations
 ---
 
-Simple usage: test
+## Usages and explanations
 
-Include usage: test
+[Simple](examples/simple.md)
 
-Layout usage: test
+[Include](examples/include.md)
 
-Multi-interesting usage (i18n, date formatting):
+[Layout](examples/layout.md)
 
-Helpers usage (with errors):
+[Internationalization](examples/i18n.md)
 
-Custom usage:
-table("Nom", "Adresse", users)
-if(admin)
+[Helpers](examples/helpers.md)
 
-Multi-level layout usage: test
+[Custom](examples.custom.md)
 
+---
 
+## Benchmarks
+
+TODO
