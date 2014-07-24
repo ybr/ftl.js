@@ -1,4 +1,4 @@
-# ftl
+# ftl.js
 
 You can promote the use of any good practice in your point of view by providing functions. Like enforcing placeholder, tooltip, explaination on form fields.
 
@@ -27,7 +27,7 @@ views.html.layout = function(title, me) {
   return function(block) {
     return div(
       withRight("admin", me)( // hyperspace only for an admin user
-        a({ href: "https://github.com/ybr/ftl" }, "Let's dive into the hyperspace")
+        a({ href: "https://github.com/ybr/ftl.js" }, "Let's dive into the hyperspace")
       ),
       h1(title),
       block
@@ -49,7 +49,7 @@ It can generate the following DOM, if the user has the "admin" right:
 
 ```html
 <div>
-  <a href="https://github.com/ybr/ftl">Let's dive into the hyperspace</a>
+  <a href="https://github.com/ybr/ftl.js">Let's dive into the hyperspace</a>
   <h1>Users page</h1>
   <p>Here you can see the list of all users</p>
   <table>

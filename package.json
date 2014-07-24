@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ybr/ftl.git"
+    "url": "https://github.com/ybr/ftl.js.git"
   },
   "main": "lib/ftl.js",
   "keywords": [
@@ -14,9 +14,9 @@
     "DOM",
     "functional"
   ],
-  "homepage": "https://github.com/ybr/ftl",
+  "homepage": "https://github.com/ybr/ftl.js",
   "bugs": {
-    "url": "https://github.com/ybr/ftl/issues"
+    "url": "https://github.com/ybr/ftl.js/issues"
   },
   "author": "Yohann Brédoux <yohann.bredoux@gmail.com>",
   "contributors": [],
