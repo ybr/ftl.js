@@ -80,6 +80,8 @@ dependencies: {
 
 [Custom](examples.custom.md)
 
+[Asynchronous](examples/async.md)
+
 ---
 
 ## Benchmarks
