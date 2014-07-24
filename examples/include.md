@@ -18,7 +18,7 @@ views.html.renderUsersTable = function(users) {
 }
 ```
 
-It creates the following DOM :
+It can generate the following DOM :
 
 ```
 <table>
@@ -41,4 +41,4 @@ It creates the following DOM :
 </table>
 ```
 
-[Layout](examples/layout.md)
+[Layout](layout.md)
