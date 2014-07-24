@@ -7,10 +7,6 @@ views.html.layout = function(title) {
   return function(block) {
     return div(
       h1(title),
-      form({ action: "search", method: "GET" },
-        input({ type: "text", name: "q" }),
-        button("Search")
-      ),
       block
     )
   }
@@ -26,7 +22,7 @@ views.html.renderUsersPage = function(users) {
 }
 ```
 
-It creates the following DOM :
+It can generate the following DOM :
 
 ```
 <div>
