@@ -1,4 +1,4 @@
-// technical boilerplate
+// Defines HTML5 elements
 var html5 = {};
 
 (function() {
@@ -8,4 +8,5 @@ var html5 = {};
   ["br", "hr"].forEach(simpleElement);
 })();
 
-var tmpl = ftl();
+// A document fragment allows to return one transparent element embedding many elements (Further reading http://davidwalsh.name/documentfragment)
+var fragment = ftl();

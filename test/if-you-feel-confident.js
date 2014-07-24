@@ -25,8 +25,13 @@ describe('If you feel confident use cases', function() {
   })
 
   it('should return a <h1>My title</h1> element', function() {
-    var elem = h1("My title")()
-    assert.equal("<h1>My title</h1>", elem.outerHTML)
+    var h1Elem = h1("My title")()
+
+    assert.equal(h1Elem.tagName, 'H1')
+
+    var h1Text = h1Elem.childNodes.item(0)
+    assert.equal(h1Text.nodeName, '#text')
+    assert.equal(h1Text.nodeValue, 'My title')
   })
 
   it('should return a <form>....</form> element', function() {
