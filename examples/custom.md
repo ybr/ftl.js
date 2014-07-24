@@ -49,7 +49,7 @@ It can generate the following DOM, if the user has the "admin" right:
 
 ```html
 <div>
-  <a href="https://github.com/ybr/ftl">Let's go into the hyperspace</a>
+  <a href="https://github.com/ybr/ftl">Let's dive into the hyperspace</a>
   <h1>Users page</h1>
   <p>Here you can see the list of all users</p>
   <table>
