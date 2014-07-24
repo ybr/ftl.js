@@ -106,7 +106,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '// ftl <%= pkg.version %>\n'
+        banner: '// ftl.js <%= pkg.version %>\n'
       },
       build: {
         src: 'src/<%= pkg.name %>.js',
@@ -145,7 +145,7 @@ module.exports = function(grunt) {
           build: process.env.TRAVIS_JOB_ID,
           concurrency: 3,
           browsers: browsers,
-          testname: 'ftl',
+          testname: 'ftljs',
           tags: ['master']
         }
       }

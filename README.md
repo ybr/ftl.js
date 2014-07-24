@@ -1,10 +1,10 @@
-# ftl
+# ftl.js
 
 Another JS template library, which pretends to be simple thanks to functions.
 
 Too simple usage ([more realistic use cases](#usages-and-explanations)) :
 ```javascript
-form({ action: "https://github.com/ybr/ftl"},
+form({ action: "https://github.com/ybr/ftl.js"},
   fieldset(
     label({ "for": "myinput" }, "My input"),
     input({ "type": "text", id: "myinput", name: "myinput" })
@@ -17,7 +17,7 @@ form({ action: "https://github.com/ybr/ftl"},
 
 It creates the following DOM :
 ```
-<form action="https://github.com/ybr/ftl">
+<form action="https://github.com/ybr/ftl.js">
   <fieldset>
     <label for="myinput">My input</label>
     <input type="text" id="myinput" name="myinput">
@@ -28,19 +28,19 @@ It creates the following DOM :
 </form>
 ```
 
-**ftl** is logic full, just plain JS (i18n, text formatting, ...)
+**ftl.js** is logic full, just plain JS (i18n, text formatting, ...)
 
-**ftl** does the bare minimum to ease DOM manipulation and readability
+**ftl.js** does the bare minimum to ease DOM manipulation and readability
 
-**ftl** allows you to write a template as a function, it pays you:
+**ftl.js** allows you to write a template as a function, it pays you:
 
   * composability of templates, both include and layout
 
   * extensibility of the templating logic seamlessly
 
-**ftl** has a very light footprint (< 500 bytes)
+**ftl.js** has a very light footprint (< 500 bytes)
 
-**ftl** performs fast, see [benchmarks](#benchmarks)
+**ftl.js** performs fast, see [benchmarks](#benchmarks)
 
 ---
 
@@ -54,11 +54,11 @@ Current master state is [![Test Status](https://saucelabs.com/buildstatus/ftljs)
 
 ## Installation
 
-Add a dependency in your package.json to [GitHub](https://github.com/ybr/ftl)
+Add a dependency in your package.json to [GitHub](https://github.com/ybr/ftl.js)
 
 ```json
 dependencies: {
-  "ftl": "https://github.com/ybr/ftl#master"
+  "ftl": "https://github.com/ybr/ftl.js#master"
 }
 ```
 

@@ -1,10 +1,10 @@
-# ftl
+# ftl.js
 
-Asynchronous is almost everywhere. Unfortunately ftl is synchronous.
+Asynchronous is almost everywhere. Unfortunately ftl.js is synchronous.
 
 But, but !!! Functions save the day.
 
-Since ftl handles functions that returns DOM elements. You can write a function that triggers some asynchronous process, render a spinner synchronously and once the asynchronous process is done then replaces the spinner with the valuable content.
+Since ftl.js handles functions that returns DOM elements. You can write a function that triggers some asynchronous process, render a spinner synchronously and once the asynchronous process is done then replaces the spinner with the valuable content.
 
 Something like:
 

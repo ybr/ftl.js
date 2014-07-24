@@ -1,4 +1,4 @@
-# ftl
+# ftl.js
 
 Let's build DOM for a table of users :
 

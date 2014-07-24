@@ -1,4 +1,4 @@
-# ftl
+# ftl.js
 
 We can create helpers to help us handle form fields:
 * helpers.inputText

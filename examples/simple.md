@@ -1,4 +1,4 @@
-# ftl
+# ftl.js
 
 Let's build DOM for a user as one row in a table :
 

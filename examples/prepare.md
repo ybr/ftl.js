@@ -1,4 +1,4 @@
-# ftl
+# ftl.js
 
 Before dealing with the interesting part we should prepare some necessary boilerplate.
 
