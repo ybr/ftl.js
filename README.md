@@ -1,6 +1,6 @@
 # ftl
 
-Another template library
+Another template library, which pretends to be simple thanks to functions.
 
 Too simple usage ([more realistic use cases](#usages-and-explanations)) :
 ```javascript
@@ -15,7 +15,7 @@ form({ action: "https://github.com/ybr/ftl"},
 )
 ```
 
-It builds the following DOM :
+It creates the following DOM :
 ```
 <form action="https://github.com/ybr/ftl">
   <fieldset>
@@ -28,9 +28,9 @@ It builds the following DOM :
 </form>
 ```
 
-**ftl** is logic-full, just plain JS (i18n, text formatting, ...)
+**ftl** is logic full, just plain JS (i18n, text formatting, ...)
 
-**ftl** does the bare minimum to make your DOM manipulation more readable
+**ftl** does the bare minimum to ease DOM manipulation and readability
 
 **ftl** allows you to write a template as a function, it pays you:
 
