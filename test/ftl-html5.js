@@ -8,4 +8,4 @@ var html5 = {};
   ["br", "hr"].forEach(simpleElement);
 })();
 
-var tmpl = ftl();
+var fragment = ftl();
