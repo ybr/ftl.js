@@ -11,7 +11,7 @@ views.html.renderUser = function(user) {
 }
 ```
 
-It creates the following DOM :
+It can generate the following DOM :
 
 ```
 <tr>
@@ -20,4 +20,4 @@ It creates the following DOM :
 </tr>
 ```
 
-[Include](examples/include.md)
+[Include](include.md)
