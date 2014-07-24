@@ -53,4 +53,4 @@ It creates the following DOM :
 </div>
 ```
 
-[Internationalization](examples/i18n.md)
+[Internationalization](i18n.md)
