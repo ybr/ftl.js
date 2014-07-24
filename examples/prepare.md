@@ -21,7 +21,7 @@ It has been a very easy decision to not provide preset tags and let you declare 
 var fragment = ftl();
 ```
 
-I known this is very dangerous to pollute the global namespace with so many functions but this is for the sake of simplicity. You can very easily use a proper namespace, say [html5](../test/ftl-html5;js), h5, ftl, ... anything you like.
+I known this is very dangerous to pollute the global namespace with so many functions but this is for the sake of simplicity. You can very easily use a proper namespace, say [html5](../test/ftl-html5.js), h5, ftl, ... anything you like.
 
 ---
 
