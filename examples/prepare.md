@@ -1,14 +1,15 @@
 # ftl
 
-Before dealing with the core interesting things we should prepare some necessary boilerplate.
+Before dealing with the interesting part we should prepare some necessary boilerplate.
 
-It has been a very easy decision to not provide preset tags and let you declare tags you are to use.
-* I hope this will demystify anything one might think is mystic
+It has been a very easy decision to not provide preset tags and let you declare tags of your own.
+* I hope this will help demystify anything one might think is mystic
 * It happens we are almost always using the same subset of tags from HTML5 so we do not need them all
 * If you count the number of characters it is twice the size of ftl.js just for strings
 
 
 ```javascript
+// Defines HTML5 elements
 (function() {
   function element(tag) { window[tag] = ftl(tag) }
   function simpleElement(tag) { window[tag] = ftl(tag)() }
@@ -16,6 +17,7 @@ It has been a very easy decision to not provide preset tags and let you declare 
   ["br", "hr"].forEach(simpleElement);
 })();
 
+// A document fragment allows to return one transparent element embedding many elements (Further reading http://davidwalsh.name/documentfragment)
 var fragment = ftl();
 ```
 

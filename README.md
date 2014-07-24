@@ -1,6 +1,6 @@
 # ftl
 
-Another template library, which pretends to be simple thanks to functions.
+Another JS template library, which pretends to be simple thanks to functions.
 
 Too simple usage ([more realistic use cases](#usages-and-explanations)) :
 ```javascript
@@ -54,7 +54,7 @@ Current master state is [![Test Status](https://saucelabs.com/buildstatus/ftljs)
 
 ## Installation
 
-From [GitHub](https://github.com/ybr/ftl)
+Add a dependency in your package.json to [GitHub](https://github.com/ybr/ftl)
 
 ```json
 dependencies: {
@@ -65,6 +65,8 @@ dependencies: {
 ---
 
 ## Usages and explanations
+
+[Prepare](examples/prepare.md)
 
 [Simple](examples/simple.md)
 
