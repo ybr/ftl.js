@@ -31,4 +31,4 @@ The following declare a namespace for HTML views (optional in your application):
 var views = { html: {} }
 ```
 
-[Simple](examples/simple.md)
+[Simple](simple.md)
