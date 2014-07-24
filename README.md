@@ -78,7 +78,7 @@ dependencies: {
 
 [Helpers](examples/helpers.md)
 
-[Custom](examples.custom.md)
+[Custom](examples/custom.md)
 
 [Asynchronous](examples/async.md)
 

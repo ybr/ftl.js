@@ -15,8 +15,8 @@ It can generate the following DOM :
 
 ```
 <tr>
-  <td>User first name</td>
-  <td>User last name</td>
+  <td>y</td>
+  <td>br</td>
 </tr>
 ```
 

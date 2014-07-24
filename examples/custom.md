@@ -26,7 +26,7 @@ I would like to have some super user behaviour on all pages:
 views.html.layout = function(title, me) {
   return function(block) {
     return div(
-      withRight("admin", me)( // hyperspace only for an admin user
+      withRight("ADMIN", me)( // hyperspace only for an admin user
         a({ href: "https://github.com/ybr/ftl.js" }, "Let's dive into the hyperspace")
       ),
       h1(title),
@@ -61,12 +61,12 @@ It can generate the following DOM, if the user has the "admin" right:
     </thead>
     <tbody>
       <tr>
-        <td>User0 first name</td>
-        <td>User0 last name</td>
+        <td>y</td>
+        <td>br</td>
       </tr>
       <tr>
-        <td>User1 first name</td>
-        <td>User1 last name</td>
+        <td>g</td>
+        <td>re</td>
       </tr>
     </tbody>
   </table>

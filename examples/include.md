@@ -30,12 +30,12 @@ It can generate the following DOM :
   </thead>
   <tbody>
     <tr>
-      <td>User0 first name</td>
-      <td>User0 last name</td>
+      <td>y</td>
+      <td>br</td>
     </tr>
     <tr>
-      <td>User1 first name</td>
-      <td>User1 last name</td>
+      <td>g</td>
+      <td>re</td>
     </tr>
   </tbody>
 </table>

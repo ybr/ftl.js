@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Simple template</title>
+  <script type="text/javascript" src="../build/ftl.min.js"></script>
+  <script type="text/javascript" src="prepare.js"></script>
+  <script type="text/javascript" src="fixtures.js"></script>
+  <script type="text/javascript" src="simple.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+
+  <script type="text/javascript">
+  var content = document.querySelector("#content")
+  content.appendChild(views.html.renderUser(user0)())
+  </script>
+</body>
+</html>
