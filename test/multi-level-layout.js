@@ -1,4 +1,4 @@
-describe('Multi-leval layout use case', function() {
+describe('Multi-level layout use case', function() {
   var h = {};
   ['a', 'ul', 'li', 'nav', 'header', 'h1', 'hr', 'div', 'footer', 'table', 'thead', 'tbody', 'th', 'tr', 'td'].forEach(function(tag) { h[tag] = ftl(tag) });
   ["hr"].forEach(function(tag) { h[tag] = ftl(tag)() });
