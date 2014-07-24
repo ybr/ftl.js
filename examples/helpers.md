@@ -2,7 +2,7 @@
 
 We can create helpers to help us handle form fields:
 * helpers.inputText
-* helpers.password
+* helpers.inputPassword
 * and so on...
 
 These helpers can manage prefilling, placeholders and last but not least errors.
@@ -28,7 +28,7 @@ helpers.inputText = function(field) {
   )
 }
 
-helpers.passord = function(field) {
+helpers.inputPassord = function(field) {
   return helpers.input(field,
     password({ id: field.name, type: "text" }) // never prefill the password
   )
