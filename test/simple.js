@@ -22,8 +22,12 @@ describe('Simple use cases', function() {
   })
 
   it('should return a <h1>My title</h1> element', function() {
-    var elem = ftl("h1")("My title")()
-    assert.equal("<h1>My title</h1>", elem.outerHTML)
+    var h1 = ftl("h1")("My title")()
+    assert.equal(h1.tagName, 'H1')
+
+    var h1Text = h1.childNodes.item(0)
+    assert.equal(h1Text.nodeName, '#text')
+    assert.equal(h1Text.nodeValue, 'My title')
   })
 
   it('should return a <form>....</form> element', function() {
