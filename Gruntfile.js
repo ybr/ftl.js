@@ -142,7 +142,7 @@ module.exports = function(grunt) {
         options: {
           urls: ["http://127.0.0.1:9999/test/index.html"],
           tunnelTimeout: 5,
-          build: process.env.TRAVIS_JOB_ID,
+          build: "master-20140725-2321",
           concurrency: 3,
           browsers: browsers,
           testname: 'ftljs',
