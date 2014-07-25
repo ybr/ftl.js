@@ -46,7 +46,9 @@ It creates the following DOM :
 
 ## Supported browser
 
-All browsers supported
+All supported browsers
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/ftljs.svg)](https://saucelabs.com/u/ftljs)
 
 Current master state is [![Test Status](https://saucelabs.com/buildstatus/ftljs)](https://saucelabs.com/u/ftljs)
 
