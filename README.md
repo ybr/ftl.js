@@ -88,4 +88,6 @@ dependencies: {
 
 ## Benchmarks
 
-TODO
+Let us know if you have any performance benchmark.
+
+Here is a benchmark on [jsPerf](http://jsperf.com/ftl-handlebars-hogan-mustache-jsrender-dust/3) which compares ftl.js, handlebars, hogan, mustache, jsrender, dust.
