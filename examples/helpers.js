@@ -21,7 +21,7 @@ helpers.inputText = function(field) {
 
 helpers.inputPassord = function(field) {
   return helpers.input(field,
-    password({ id: field.name, type: "text" }) // never prefill the password
+    password({ id: field.name, type: "password" }) // never prefill the password
   )
 }
 
