@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/ybr/ftl.js.git"
   },
+  "bugs": {
+    "url": "https://github.com/ybr/ftl.js/issues"
+  },
   "main": "lib/ftl.js",
   "keywords": [
     "template",
@@ -18,8 +21,16 @@
   "bugs": {
     "url": "https://github.com/ybr/ftl.js/issues"
   },
-  "author": "Yohann Brédoux <yohann.bredoux@gmail.com>",
+  "author": {
+    "name": "Yohann Brédoux",
+    "email": "yohann.bredoux@gmail.com",
+    "url": "https://twitter.com/ybrdx"
+  },
   "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ybr/ftl.js.git"
+  },
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-jshint": "^0.9.2",
