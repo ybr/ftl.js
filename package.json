@@ -1,7 +1,7 @@
 {
   "name": "ftl",
-  "version": "1.0",
-  "description": "Stateful functional DOM templating",
+  "version": "1.0.1",
+  "description": "Logicfull functional DOM templating",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "main": "lib/ftl.js",
   "keywords": [
     "template",
-    "stateful",
+    "logicfull",
     "DOM",
     "functional"
   ],
